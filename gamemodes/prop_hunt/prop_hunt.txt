@@ -211,6 +211,15 @@
 			"type"		"CheckBox"
 			"default"	"1"
 		}
+    
+    23
+		{
+			"name"		"ph_bsextras"
+			"text"		"Bullshit Extras"
+			"help"		"You don't know what this does. But you want to find out."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
 	}
 
 }

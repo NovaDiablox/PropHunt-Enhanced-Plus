@@ -89,9 +89,10 @@ local function MainFrame()
 
 	comb:Dock(TOP)
 	comb:SetSize(0, 20)
-	comb:SetValue("Original Taunts")
+	comb:SetValue(PHE.LAST_TAUNT_LIST)
 	comb:AddChoice("Original Taunts")
 	comb:AddChoice("PH:E/Custom Taunts")
+	-- TODO: Group by pack!
 
 	function comb:SortAndStyle(pnl)
 		pnl:SortByColumn(1, false)
@@ -132,7 +133,7 @@ local function MainFrame()
 	comb.OnSelect = function(pnl, idx, val)
 		hastaunt = false
 		list:Clear()
-
+		PHE.LAST_TAUNT_LIST = val
 		local tauntList = {}
 		if val == "Original Taunts" then
 			tauntList = TEAM_TAUNTS
@@ -150,6 +151,9 @@ local function MainFrame()
 
 		pnl:SortAndStyle(list)
 	end
+
+	-- Manually Trigger due to remembering
+	comb.OnSelect(comb,0,PHE.LAST_TAUNT_LIST)
 
 	comb:SortAndStyle(list)
 

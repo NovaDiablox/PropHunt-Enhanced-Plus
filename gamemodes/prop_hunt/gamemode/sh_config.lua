@@ -2,6 +2,7 @@
 PHE.PH_TAUNT_CUSTOM = {}
 PHE.PH_TAUNT_CUSTOM.PROP = {}
 PHE.PH_TAUNT_CUSTOM.HUNTER = {}
+PHE.LAST_TAUNT_LIST = "Original Taunts"
 
 -- Time (in seconds) for spectator check (Default: 0.1)
 PHE.SPECTATOR_CHECK_ADD = 0.1
